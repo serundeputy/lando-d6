@@ -3,7 +3,7 @@ Drupal 6 Example
 
 Dependency is installing lando:
   * [lando](https://github.com/kalabox/lando)
-  * [docs](https://docs.lndo.io/)
+  * [lando docs](https://docs.lndo.io/)
 
 This is a Drupal 6 example using php 5.3 so you can run old drupal apps and its
 modules that may not cooperate with newer versions of php.
