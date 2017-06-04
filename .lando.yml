@@ -1,0 +1,29 @@
+name: lando-d6
+sharing:
+  appserver:
+    local: www
+    remote: /var/www/html
+proxy:
+  nginx:
+    - port: 80/tcp
+      default: true
+    - port: 443/tcp
+      default: true
+      secure: true
+services:
+  appserver:
+    type: php:5.3
+    via: nginx
+    ssl: true
+    config:
+      server: config/nginx/drupal.conf
+      conf: config/php/php.ini
+  database:
+    type: mariadb
+    portforward: 3310
+    creds:
+      user: drupal
+      password: drupal
+      database: drupal
+    config:
+      confd: config/mysql
